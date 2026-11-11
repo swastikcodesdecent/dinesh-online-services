@@ -1,0 +1,31 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (request.auth.token.admin == true || request.auth.token.email == 'admin@dineshonline.in');
+    }
+
+    // Customer documents folder: /customer_documents/{mobile}/{filename}
+    match /customer_documents/{mobile}/{fileName} {
+      // Must be authenticated owner or admin
+      allow read: if isAuthenticated() && (request.auth.token.phone_number == ('+91' + mobile) || isAdmin());
+      
+      // Restrict upload: Max 5MB, PDF/JPG/PNG only
+      allow write: if isAuthenticated() && (request.auth.token.phone_number == ('+91' + mobile) || isAdmin())
+                    && request.resource.size < 5 * 1024 * 1024
+                    && request.resource.contentType.matches('application/pdf|image/jpeg|image/jpg|image/png');
+    }
+
+    // Public assets (icons/branding)
+    match /public/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login | Dinesh Online Solution</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/authentication.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <div class="brand-logo-icon"><i data-lucide="shield-check"></i></div>
+        <div class="brand-text">
+          <span class="brand-title">Dinesh Online Solution</span>
+          <span class="brand-tagline">Your True Digital Companion</span>
+        </div>
+      </a>
+      <a href="../index.html" class="btn btn-outline btn-sm">Back to Home</a>
+    </div>
+  </header>
+
+  <main class="auth-wrapper">
+    <div class="auth-card animate-fade-in">
+      <div class="auth-header">
+        <div class="auth-logo-icon">
+          <i data-lucide="user-check"></i>
+        </div>
+        <h2 class="auth-title">Citizen Login</h2>
+        <p class="auth-subtitle">Enter your 10-digit mobile number and 4-digit PIN.</p>
+      </div>
+
+      <!-- Lockout Alert Container -->
+      <div id="loginAlertContainer"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label required">Mobile Number</label>
+          <div class="phone-input-wrapper">
+            <span class="phone-prefix">+91</span>
+            <input type="tel" id="loginMobile" class="form-control phone-input" placeholder="9876543210" maxlength="10"
+              required autofocus>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="pin-label-row">
+            <label class="form-label required">4-Digit Security PIN</label>
+            <a href="forgot-pin.html" class="forgot-pin-link">Forgot PIN?</a>
+          </div>
+          <input type="password" id="loginPin" class="form-control" placeholder="••••" maxlength="4" inputmode="numeric"
+            required>
+        </div>
+
+        <button type="submit" id="loginSubmitBtn" class="btn btn-primary btn-full btn-lg" style="margin-top:1.5rem;">
+          <i data-lucide="log-in"></i> Sign In to Dashboard
+        </button>
+      </form>
+
+      <div class="auth-footer-text">
+        Don't have an account yet? <a href="register.html">Register in 30 seconds</a>
+      </div>
+
+      <div
+        style="text-align:center; margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--border-light);">
+        <a href="admin-login.html"
+          style="font-size:0.8125rem; color:var(--text-muted); display:inline-flex; align-items:center; gap:0.25rem;">
+          <i data-lucide="shield"></i> Operator / Admin Portal Login
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <script src="../js/config/firebase-config.js"></script>
+  <script src="../js/i18n/translations.js"></script>
+  <script src="../js/core/utilities.js"></script>
+  <script src="../js/core/validation.js"></script>
+  <script src="../js/core/notifications.js"></script>
+  <script src="../js/auth/session.js"></script>
+  <script src="../js/auth/login.js"></script>
+  <script src="../js/core/app.js"></script>
+</body>
+
+</html>

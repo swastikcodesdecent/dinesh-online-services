@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Dinesh Online Solution</title>
+  <meta name="description" content="Learn about Dinesh Online Solution - Your True Digital Companion. Providing citizen services, document assistance, and digital governance solutions in Jabalpur, MP with integrity.">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <div class="brand-logo-icon"><i data-lucide="shield-check"></i></div>
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brand_name">Dinesh Online Solution</span>
+          <span class="brand-tagline" data-i18n="brand_tagline">Your True Digital Companion</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="about.html" class="nav-link active" data-i18n="nav_about">About Us</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <!-- Action Items & Language Switcher -->
+      <div class="header-actions">
+        <button class="lang-btn" aria-label="Toggle Language">
+          <i data-lucide="globe"></i>
+          <span class="lang-switcher-text">हिन्दी</span>
+        </button>
+
+        <div class="nav-auth-actions" style="display:flex; align-items:center; gap:0.5rem;">
+          <a href="login.html" class="btn btn-outline btn-sm" data-i18n="nav_login">Login</a>
+          <a href="register.html" class="btn btn-primary btn-sm" data-i18n="nav_register">Register</a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open Mobile Menu">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+      <a href="../index.html" class="nav-link" data-i18n="nav_home">Home</a>
+      <a href="services.html" class="nav-link" data-i18n="nav_services">Services</a>
+      <a href="about.html" class="nav-link active" data-i18n="nav_about">About Us</a>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+      <div class="drawer-auth-section">
+        <a href="login.html" class="btn btn-outline btn-full" data-i18n="nav_login">Login</a>
+        <a href="register.html" class="btn btn-primary btn-full" data-i18n="nav_register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Banner with AI-Generated Banner Backdrop -->
+    <section class="about-hero-section">
+      <div class="about-hero-backdrop">
+        <img src="../assets/images/about-image.png" alt="Dinesh Online Solution Digital Citizen Centre" class="about-hero-bg" fetchpriority="high">
+        <div class="about-hero-overlay"></div>
+      </div>
+      <div class="container about-hero-content">
+        <div class="about-badge-strip">
+          <i data-lucide="award" style="width:16px; height:16px;"></i>
+          <span>Trusted CSC & Citizen Facilitation Centre • Jabalpur, MP</span>
+        </div>
+        <h1 class="about-hero-title">
+          Empowering Citizens Through <span>Reliable Digital Services</span>
+        </h1>
+        <p class="about-hero-desc">
+          Bridging India's digital governance divide with transparent assistance, certified document formatting, zero hidden charges, and end-to-end application tracking.
+        </p>
+        <div class="about-hero-tags">
+          <div class="about-hero-tag">
+            <i data-lucide="check-circle" style="width:14px; height:14px; color:#60A5FA;"></i>
+            <span>Authorized Facilitation Centre</span>
+          </div>
+          <div class="about-hero-tag">
+            <i data-lucide="clock" style="width:14px; height:14px; color:#60A5FA;"></i>
+            <span>Open Mon–Sat: 9:00 AM – 7:30 PM</span>
+          </div>
+          <div class="about-hero-tag">
+            <i data-lucide="map-pin" style="width:14px; height:14px; color:#60A5FA;"></i>
+            <span>Jabalpur, Madhya Pradesh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Stats & Impact Numbers -->
+    <div class="container about-stats-container">
+      <div class="about-stats-card">
+        <div class="about-stat-item">
+          <div class="about-stat-icon">
+            <i data-lucide="users" style="width:26px; height:26px;"></i>
+          </div>
+          <div>
+            <div class="about-stat-val">10,000+</div>
+            <div class="about-stat-label">Citizens Assisted</div>
+          </div>
+        </div>
+
+        <div class="about-stat-item">
+          <div class="about-stat-icon" style="background:var(--success-bg); color:var(--success);">
+            <i data-lucide="check-check" style="width:26px; height:26px;"></i>
+          </div>
+          <div>
+            <div class="about-stat-val">99.8%</div>
+            <div class="about-stat-label">Application Success Rate</div>
+          </div>
+        </div>
+
+        <div class="about-stat-item">
+          <div class="about-stat-icon" style="background:var(--accent-orange-light); color:var(--accent-orange);">
+            <i data-lucide="layout-grid" style="width:26px; height:26px;"></i>
+          </div>
+          <div>
+            <div class="about-stat-val">40+</div>
+            <div class="about-stat-label">Essential Public Services</div>
+          </div>
+        </div>
+
+        <div class="about-stat-item">
+          <div class="about-stat-icon" style="background:#F3E8FF; color:#7E22CE;">
+            <i data-lucide="shield-check" style="width:26px; height:26px;"></i>
+          </div>
+          <div>
+            <div class="about-stat-val">10+ Years</div>
+            <div class="about-stat-label">Local Experience & Trust</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story & Mission Section -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="about-story-grid">
+          <div class="story-content-box">
+            <span class="badge badge-tag" style="background:var(--royal-blue-light); color:var(--royal-blue); margin-bottom:1rem; display:inline-flex;">
+              Our Mission & Commitment
+            </span>
+            <h2 class="story-heading">
+              Making Digital Governance Simple, Transparent, and Accessible
+            </h2>
+            <p class="story-lead-p">
+              Applying for a PAN card, updating Aadhaar demographics, obtaining domicile certificates, or paying municipal utility bills shouldn't mean wasting days standing in chaotic government queues.
+            </p>
+            <p class="story-body-p">
+              Founded with the objective of eliminating bureaucratic frustration for common citizens, <strong>Dinesh Online Solution</strong> combines an established walk-in centre in Jabalpur, Madhya Pradesh with an enterprise-grade digital portal. We guide citizens, students, farmers, senior citizens, and local business owners with precision document checking, official portal submissions, and transparent pricing.
+            </p>
+
+            <div class="story-feature-list">
+              <div class="story-feature-item">
+                <div class="story-feature-icon">
+                  <i data-lucide="check" style="width:16px; height:16px;"></i>
+                </div>
+                <div>
+                  <div class="story-feature-text">Pre-Submission Quality Inspection</div>
+                  <span class="story-feature-sub">Every form, photograph, and signature is verified against UIDAI, NSDL, and E-District rules to prevent rejections.</span>
+                </div>
+              </div>
+
+              <div class="story-feature-item">
+                <div class="story-feature-icon">
+                  <i data-lucide="check" style="width:16px; height:16px;"></i>
+                </div>
+                <div>
+                  <div class="story-feature-text">Transparent Itemized Billing</div>
+                  <span class="story-feature-sub">Statutory government fees are collected strictly at par without markup, clearly separated from minimal facilitation charges.</span>
+                </div>
+              </div>
+
+              <div class="story-feature-item">
+                <div class="story-feature-icon">
+                  <i data-lucide="check" style="width:16px; height:16px;"></i>
+                </div>
+                <div>
+                  <div class="story-feature-text">Bilingual Support in Hindi & English</div>
+                  <span class="story-feature-sub">Our operators communicate comfortably in your preferred language to make documentation completely stress-free.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual & Store Details Card -->
+          <div class="story-visual-wrap">
+            <div class="story-image-card">
+              <img src="../assets/images/about-image.png" alt="Dinesh Online Solution Facilitation Centre" class="story-main-img">
+              <div class="story-badge-overlay">
+                <i data-lucide="map-pin" style="width:14px; height:14px; color:#60A5FA;"></i>
+                <span>Jabalpur Centre • Madhya Pradesh</span>
+              </div>
+            </div>
+
+            <!-- Centre Contact & Meta Card -->
+            <div class="story-meta-card">
+              <div class="story-meta-row">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <strong>Shop Address:</strong> Jabalpur, Madhya Pradesh
+                </div>
+              </div>
+
+              <div class="story-meta-row">
+                <i data-lucide="clock"></i>
+                <div>
+                  <strong>Shop Timings:</strong> 9:00 AM to 7:30 PM (Mon – Sat)
+                </div>
+              </div>
+
+              <div class="story-meta-row">
+                <i data-lucide="phone"></i>
+                <div>
+                  <strong>Phone & WhatsApp:</strong> <a href="tel:+919131171406" style="color:var(--royal-blue); font-weight:600;">+91 91311 71406</a>
+                </div>
+              </div>
+
+              <div class="story-meta-row">
+                <i data-lucide="mail"></i>
+                <div>
+                  <strong>Official Email:</strong> <a href="mailto:email.d2841735@gmail.com" style="color:var(--royal-blue); font-weight:600;">email.d2841735@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Walk-In Centre Facilities Section -->
+    <section class="about-centre-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="badge badge-tag" style="background:#E0E7FF; color:#4338CA;">
+            Modern Infrastructure
+          </span>
+          <h2>Walk-In Centre Facilities in Jabalpur</h2>
+          <p>
+            Equipped with high-performance biometric hardware, high-resolution scanners, and dedicated operator consultation bays to serve citizens efficiently.
+          </p>
+        </div>
+
+        <div class="centre-features-grid">
+          <div class="centre-feature-card">
+            <div class="centre-feature-icon" style="background:var(--royal-blue-light); color:var(--royal-blue);">
+              <i data-lucide="fingerprint"></i>
+            </div>
+            <h3>Biometric & e-KYC Verification</h3>
+            <p>
+              Govt-approved fingerprint scanners and iris readers ensuring seamless authentication for Aadhaar, pension life certificates, and DBT schemes.
+            </p>
+          </div>
+
+          <div class="centre-feature-card">
+            <div class="centre-feature-icon" style="background:var(--accent-orange-light); color:var(--accent-orange);">
+              <i data-lucide="scan"></i>
+            </div>
+            <h3>Photo Lab & Document Sizing</h3>
+            <p>
+              Precision scanning and automated image resizing matching strict portal specifications (DPI, file weight, crop guidelines) for instant acceptance.
+            </p>
+          </div>
+
+          <div class="centre-feature-card">
+            <div class="centre-feature-icon" style="background:var(--success-bg); color:var(--success);">
+              <i data-lucide="credit-card"></i>
+            </div>
+            <h3>Instant PVC Card Embossing</h3>
+            <p>
+              High-durability plastic PVC card printing for Aadhaar cards, PAN cards, Voter IDs, and Ayushman Bharat health insurance cards on the spot.
+            </p>
+          </div>
+
+          <div class="centre-feature-card">
+            <div class="centre-feature-icon" style="background:#F3E8FF; color:#7E22CE;">
+              <i data-lucide="user-check"></i>
+            </div>
+            <h3>1-on-1 Operator Consultation</h3>
+            <p>
+              Sit face-to-face with seasoned facilitators who guide you through complex documentation, eligibility criteria, and state government schemes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Guarantees & Pillars Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="badge badge-tag" style="background:var(--royal-blue-light); color:var(--royal-blue);">
+            Why Citizens Trust Us
+          </span>
+          <h2>Our Four Core Pillars of Service</h2>
+          <p>
+            Built upon unwavering standards of data confidentiality, financial honesty, and meticulous technical execution.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:var(--royal-blue-light); color:var(--royal-blue);">
+              <i data-lucide="lock"></i>
+            </div>
+            <h3>Data Privacy & Confidentiality</h3>
+            <p>
+              Your sensitive identification records, biometric logs, and financial certificates are handled with highest discretion. Files are never shared with advertisers or third parties.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:var(--accent-orange-light); color:var(--accent-orange);">
+              <i data-lucide="receipt"></i>
+            </div>
+            <h3>Zero Hidden Fees</h3>
+            <p>
+              Complete transparency in pricing. We clearly itemize the official government pass-through fee and the facilitation charge so you know exactly where every rupee goes.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:var(--success-bg); color:var(--success);">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3>Rejection Prevention Check</h3>
+            <p>
+              Every field, demographic match, address proof, and signature is double-checked by trained operators prior to portal submission to guarantee a 99.8% success rate.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:#F3E8FF; color:#7E22CE;">
+              <i data-lucide="activity"></i>
+            </div>
+            <h3>End-to-End Tracking</h3>
+            <p>
+              We don't abandon you after application filing. We continuously monitor status updates on government servers and alert you via WhatsApp until final certificate approval.
+            </p>
+          </div>
+        </div>
+
+        <!-- How We Work Process Flow -->
+        <div class="process-section">
+          <div class="section-header-centered" style="margin-bottom:2.5rem;">
+            <span class="badge badge-tag" style="background:#E2E8F0; color:#475569;">
+              Seamless Process
+            </span>
+            <h2>How It Works</h2>
+            <p>From initial inquiry to final government approval in 4 straightforward steps.</p>
+          </div>
+
+          <div class="process-steps-row">
+            <div class="process-step-card">
+              <span class="step-num-badge">STEP 01</span>
+              <h4>Inquiry & Paperwork Check</h4>
+              <p>Visit our Jabalpur centre or message us on WhatsApp with your document details to confirm exact requirements.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-num-badge">STEP 02</span>
+              <h4>Verification & Formatting</h4>
+              <p>Our operator scans, resizes, and standardizes all proofs to match official regulatory specifications.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-num-badge">STEP 03</span>
+              <h4>Official Portal Submission</h4>
+              <p>Application is submitted directly to designated government servers with immediate official acknowledgement receipt.</p>
+            </div>
+
+            <div class="process-step-card">
+              <span class="step-num-badge">STEP 04</span>
+              <h4>Tracking & Handover</h4>
+              <p>We monitor progress, notify you of milestones, and deliver your approved certificate or PVC card smoothly.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statutory Clarification Box -->
+        <div class="about-disclaimer-card">
+          <div class="disclaimer-icon">
+            <i data-lucide="info" style="width:26px; height:26px;"></i>
+          </div>
+          <div class="disclaimer-body">
+            <h4>Important Regulatory Clarification & Transparency Notice</h4>
+            <p>
+              Dinesh Online Solution is an independent digital facilitation and documentation consultancy enterprise based in Jabalpur, Madhya Pradesh. We provide advisory, document sizing, data entry, and portal submission assistance. We are not an official government ministry or statutory authority. Statutory approvals, certificate issuance, speed post dispatch, and portal uptime remain under the sole jurisdiction of respective central and state administrative departments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call to Action Card -->
+        <div class="about-cta-card">
+          <div class="cta-text-side">
+            <span class="cta-tag">Ready to get started?</span>
+            <h3 class="cta-title">Need Assistance With Any Government or Citizen Service?</h3>
+            <p class="cta-desc">
+              Whether you need a new PAN card, Aadhaar demographic update, utility bill payment, or domicile certificate, our expert facilitators in Jabalpur are ready to help.
+            </p>
+          </div>
+
+          <div class="cta-btn-group">
+            <a href="services.html" class="btn btn-primary btn-lg" style="display:flex; align-items:center; gap:0.5rem;">
+              <i data-lucide="layout-grid"></i> Browse 40+ Services
+            </a>
+            <a href="https://wa.me/919131171406?text=Hello%20Dinesh%20Online%20Solution,%20I%20need%20assistance%20with%20a%20digital%20service." target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color:#FFFFFF; border-color:rgba(255,255,255,0.3); display:flex; align-items:center; gap:0.5rem;">
+              <i data-lucide="message-circle"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+919131171406" class="btn btn-sm" style="color:#93C5FD; text-align:center; background:transparent; border:none; padding:0.25rem 0;">
+              Or Call Us: +91 91311 71406
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Full Official Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <div class="brand" style="margin-bottom:1rem;">
+          <div class="brand-logo-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title" data-i18n="brand_name">Dinesh Online Solution</span>
+            <span class="brand-tagline" data-i18n="brand_tagline">Your True Digital Companion</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Authorized Digital Seva & Citizen Facilitation Centre empowering communities with swift, paperless documentation, online government submissions, and utility payments.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="https://wa.me/919131171406" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../index.html" data-i18n="nav_home">Home</a>
+          <a href="services.html" data-i18n="nav_services">All Services</a>
+          <a href="about.html" data-i18n="nav_about">About Us</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact Us</a>
+          <a href="customer-dashboard.html">Customer Dashboard</a>
+          <a href="admin-login.html">Admin Portal</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Service Categories</h4>
+        <div class="footer-links">
+          <a href="services.html?cat=PAN">PAN Card Services</a>
+          <a href="services.html?cat=Aadhaar">Aadhaar Assistance</a>
+          <a href="services.html?cat=Bills">Bill Payments</a>
+          <a href="services.html?cat=Forms">Online Forms</a>
+          <a href="services.html?cat=Certificates">Certificates</a>
+          <a href="services.html?cat=Schemes">Govt Schemes</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Contact Information</h4>
+        <div class="footer-contact-list">
+          <div class="contact-item">
+            <i data-lucide="phone"></i>
+            <span>+91 91311 71406</span>
+          </div>
+          <div class="contact-item">
+            <i data-lucide="message-square"></i>
+            <span>+91 91311 71406 (WhatsApp)</span>
+          </div>
+          <div class="contact-item">
+            <i data-lucide="mail"></i>
+            <span>email.d2841735@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>Jabalpur , Madhya Pradesh</span>
+          </div>
+          <div class="contact-item">
+            <i data-lucide="clock"></i>
+            <span>9am to 7:30 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-disclaimer-box">
+        <strong>Statutory Notice:</strong> Dinesh Online Solution is an independent digital facilitation and documentation assistance centre. We are not a government agency, department or official portal. Government fees (if any) are collected strictly as official pass-through fees without markup. Service charges reflect professional operator assistance, file formatting, verification and portal submission services.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Dinesh Online Solution. All rights reserved. Designed with modern web standards.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="contact.html#privacy">Privacy Policy</a>
+          <a href="contact.html#terms">Terms & Conditions</a>
+          <a href="contact.html#refund">Refund Policy</a>
+          <a href="contact.html#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a href="https://wa.me/919131171406?text=Hello%20Dinesh%20Online%20Solution,%20I%20need%20assistance%20with%20a%20digital%20service." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i data-lucide="message-circle" style="font-size:26px;"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="../js/config/firebase-config.js"></script>
+  <script src="../js/i18n/translations.js"></script>
+  <script src="../js/core/utilities.js"></script>
+  <script src="../js/core/validation.js"></script>
+  <script src="../js/core/notifications.js"></script>
+  <script src="../js/auth/session.js"></script>
+  <script src="../js/core/app.js"></script>
+</body>
+</html>

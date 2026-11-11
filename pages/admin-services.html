@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service & Price Management | Admin Console</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <script src="../js/core/admin-guard.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header" style="background:#0F172A; border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div class="container header-inner">
+      <a href="admin-dashboard.html" class="brand">
+        <div class="brand-logo-icon"><i data-lucide="shield-check"></i></div>
+        <div class="brand-text">
+          <span class="brand-title" style="color:#fff;">Dinesh Online Solution</span>
+          <span class="brand-tagline">Admin Console</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" onclick="document.querySelector('.admin-sidebar').classList.toggle('open')"
+          style="color:#fff;">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-avatar-box">OP</div>
+        <div class="admin-operator-meta">
+          <div class="admin-operator-name">Dinesh Operator</div>
+          <div class="admin-operator-role"><span class="status-dot-pulse"></span> Super Admin</div>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <a href="admin-dashboard.html" class="admin-nav-link">
+          <i data-lucide="layout-dashboard"></i> Dashboard
+        </a>
+        <a href="admin-applications.html" class="admin-nav-link">
+          <i data-lucide="file-check"></i> Applications
+        </a>
+        <a href="admin-customers.html" class="admin-nav-link">
+          <i data-lucide="users"></i> Customers
+        </a>
+        <a href="admin-services.html" class="admin-nav-link active">
+          <i data-lucide="layers"></i> Services & Pricing
+        </a>
+        <a href="admin-payments.html" class="admin-nav-link">
+          <i data-lucide="banknote"></i> Revenue & Ledger
+        </a>
+        <a href="admin-support.html" class="admin-nav-link">
+          <i data-lucide="life-buoy"></i> Support Desk
+        </a>
+        <a href="admin-settings.html" class="admin-nav-link">
+          <i data-lucide="settings"></i> Portal Settings
+        </a>
+      </nav>
+
+      <div style="padding:1rem 0.85rem; border-top:1px solid rgba(255,255,255,0.08);">
+        <button class="admin-nav-link" onclick="window.adminLogout()" style="width:100%; color:#f87171;">
+          <i data-lucide="log-out"></i> Admin Logout
+        </button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="dashboard-header">
+        <div class="dashboard-title-group">
+          <h1>Service Catalogue & Dynamic Pricing</h1>
+          <p>Modify service charges, government fees, and active catalog offerings in real-time.</p>
+        </div>
+
+        <div>
+          <button id="addServiceBtn" class="btn btn-primary">
+            <i data-lucide="plus"></i> Add New Service
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="admin-stats-strip">
+        <div class="admin-stat-card">
+          <div class="admin-stat-info">
+            <span class="admin-stat-label">Active Catalogue</span>
+            <span class="admin-stat-val" id="statTotalServices">26 Services</span>
+          </div>
+          <div class="admin-stat-icon-box">
+            <i data-lucide="layers"></i>
+          </div>
+        </div>
+
+        <div class="admin-stat-card">
+          <div class="admin-stat-info">
+            <span class="admin-stat-label">Service Categories</span>
+            <span class="admin-stat-val" id="statTotalCategories">7 Sectors</span>
+          </div>
+          <div class="admin-stat-icon-box green">
+            <i data-lucide="folder-check"></i>
+          </div>
+        </div>
+
+        <div class="admin-stat-card">
+          <div class="admin-stat-info">
+            <span class="admin-stat-label">Avg. Facilitation Fee</span>
+            <span class="admin-stat-val" id="statAvgFee">₹85.00</span>
+          </div>
+          <div class="admin-stat-icon-box amber">
+            <i data-lucide="badge-percent"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Table Card Container -->
+      <div class="admin-table-card">
+        <div class="admin-table-toolbar">
+          <div class="admin-toolbar-left">
+            <div class="admin-search-wrapper">
+              <i data-lucide="search" class="admin-search-icon"></i>
+              <input type="text" id="adminServiceSearch" class="admin-search-input" placeholder="Search by name, ID or category...">
+            </div>
+
+            <select id="adminCategoryFilter" class="admin-filter-select">
+              <option value="All">All Categories</option>
+            </select>
+
+            <span class="admin-counter-pill" id="serviceCountPill">Loading services...</span>
+          </div>
+        </div>
+
+        <div class="table-responsive" style="border:none; border-radius:0;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width:140px;">Service ID</th>
+                <th>Service Name & Requirements</th>
+                <th>Category</th>
+                <th style="text-align:right;">Facilitation Fee</th>
+                <th style="text-align:right;">Govt Statutory Fee</th>
+                <th style="text-align:right;">Total Customer Price</th>
+                <th style="text-align:center; width:130px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminServicesTableBody">
+              <!-- Dynamically populated by admin services.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <script src="../js/config/firebase-config.js"></script>
+  <script src="../js/i18n/translations.js"></script>
+  <script src="../js/core/utilities.js"></script>
+  <script src="../js/core/validation.js"></script>
+  <script src="../js/core/notifications.js"></script>
+  <script src="../js/auth/session.js"></script>
+  <script src="../js/services/service-list.js"></script>
+  <script src="../js/admin/services.js"></script>
+  <script src="../js/core/app.js"></script>
+</body>
+
+</html>

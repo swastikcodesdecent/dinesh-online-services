@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinesh Online Solution | Your True Digital Companion</title>
+  <meta name="description" content="Your trusted digital service centre for PAN card, Aadhaar assistance, utility bill payments, online form filling, government schemes and certificate services.">
+
+  <!-- Google Fonts: Inter, Manrope, Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-logo-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brand_name">Dinesh Online Solution</span>
+          <span class="brand-tagline" data-i18n="brand_tagline">Your True Digital Companion</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a>
+        <a href="pages/services.html" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="pages/about.html" class="nav-link" data-i18n="nav_about">About Us</a>
+        <a href="pages/contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <!-- Action Items & Language Switcher -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button class="lang-btn" aria-label="Toggle Language">
+          <i data-lucide="globe"></i>
+          <span class="lang-switcher-text">हिन्दी</span>
+        </button>
+
+        <!-- Auth Actions / Dynamic Login or User Profile -->
+        <div class="nav-auth-actions" style="display:flex; align-items:center; gap:0.5rem;">
+          <a href="pages/login.html" class="btn btn-outline btn-sm" data-i18n="nav_login">Login</a>
+          <a href="pages/register.html" class="btn btn-primary btn-sm" data-i18n="nav_register">Register</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Open Mobile Menu">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer">
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a>
+      <a href="pages/services.html" class="nav-link" data-i18n="nav_services">Services</a>
+      <a href="pages/about.html" class="nav-link" data-i18n="nav_about">About Us</a>
+      <a href="pages/contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+      <div class="drawer-auth-section">
+        <a href="pages/login.html" class="btn btn-outline btn-full" data-i18n="nav_login">Login</a>
+        <a href="pages/register.html" class="btn btn-primary btn-full" data-i18n="nav_register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner-section">
+      <div class="hero-banner-backdrop">
+        <img src="assets/images/hero-image.png" alt="Dinesh Online Solution Digital Citizen Portal" class="hero-banner-bg" fetchpriority="high">
+        <div class="hero-banner-overlay"></div>
+      </div>
+
+      <div class="container hero-banner-content">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge badge-tag hero-badge">
+              <i data-lucide="award"></i> <span data-i18n="hero_badge">Trusted CSC & Digital Facilitation Centre</span>
+            </span>
+            <h1 class="hero-title text-hero">
+              <span data-i18n="hero_title_part1">Your Trusted</span><br>
+              <span data-i18n="hero_title_highlight">Digital Service Partner</span>
+            </h1>
+            <p class="hero-desc" data-i18n="hero_description">
+              Access essential digital services, online applications, bill payments and documentation assistance conveniently from one place.
+            </p>
+
+            <div class="hero-actions">
+              <a href="pages/services.html" class="btn btn-primary btn-lg" data-i18n="btn_explore_services">
+                <i data-lucide="layout-grid"></i> Explore Services
+              </a>
+              <a href="pages/register.html" class="btn btn-navy btn-lg" data-i18n="btn_get_started">
+                <i data-lucide="arrow-right"></i> Get Started
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-i18n="hero_stat_citizens">10,000+</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_citizens_label">Citizens Served</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-i18n="hero_stat_success">99.8%</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_success_label">Success Rate</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-i18n="hero_stat_services">40+</span>
+                <span class="hero-stat-label" data-i18n="hero_stat_services_label">Essential Services</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Glass Feature Cards on the Banner -->
+          <div class="hero-visual">
+            <div class="hero-glass-card">
+              <div class="hero-glass-feature">
+                <div class="hero-glass-icon blue">
+                  <i data-lucide="credit-card"></i>
+                </div>
+                <div class="hero-glass-text">
+                  <h5>PAN & Aadhaar Assistance</h5>
+                  <p>Fast demographic updates & instant e-PAN issuance</p>
+                </div>
+              </div>
+
+              <div class="hero-glass-feature">
+                <div class="hero-glass-icon green">
+                  <i data-lucide="zap"></i>
+                </div>
+                <div class="hero-glass-text">
+                  <h5>Instant Utility Clearances</h5>
+                  <p>Electricity, Gas & Water with verifiable tax receipts</p>
+                </div>
+              </div>
+
+              <div class="hero-glass-feature">
+                <div class="hero-glass-icon orange">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div class="hero-glass-text">
+                  <h5>Government & Job Portals</h5>
+                  <p>SSC, Railway, UPSSSC & E-District certificates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Services Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-tag section-tag">Fast & Verified</span>
+          <h2 class="section-title text-section" data-i18n="section_popular_title">Popular Digital Services</h2>
+          <p class="section-subtitle" data-i18n="section_popular_sub">
+            Quick, transparent and certified digital assistance for all daily requirements.
+          </p>
+        </div>
+
+        <div class="services-grid" id="popularServicesGrid">
+          <!-- 6 Popular Service Cards Generated Dynamically from Service Catalog -->
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="credit-card"></i></div>
+              <span class="service-category-badge">PAN Services</span>
+            </div>
+            <h4 class="service-card-title">PAN Card Services</h4>
+            <p class="service-card-desc">New PAN 49A application, corrections in name/DOB, lost duplicate re-issue, and instant status verification.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="150">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('pan-new')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('pan-new')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="shield-check"></i></div>
+              <span class="service-category-badge">Aadhaar Assistance</span>
+            </div>
+            <h4 class="service-card-title">Aadhaar Assistance</h4>
+            <p class="service-card-desc">Demographic update guidance, e-Aadhaar download, official UIDAI PVC card orders, and Kendra appointment booking.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="50">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('aadhaar-update')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('aadhaar-update')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="smartphone"></i></div>
+              <span class="service-category-badge">Recharge & Utility</span>
+            </div>
+            <h4 class="service-card-title">Mobile & DTH Recharge</h4>
+            <p class="service-card-desc">Instant online mobile recharge for Jio, Airtel, Vi, BSNL and TV DTH subscriptions with valid transaction receipts.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="10">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('recharge-mobile')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('recharge-mobile')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="zap"></i></div>
+              <span class="service-category-badge">Utility Bills</span>
+            </div>
+            <h4 class="service-card-title">Electricity Bill Payment</h4>
+            <p class="service-card-desc">Hassle-free settlement for UPPCL (Rural & Urban) and all state electricity discoms with instantaneous payment receipt.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="20">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('bill-electricity')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('bill-electricity')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="briefcase"></i></div>
+              <span class="service-category-badge">Online Forms</span>
+            </div>
+            <h4 class="service-card-title">Online Form Filling</h4>
+            <p class="service-card-desc">Government job applications (SSC, Railway, Police, UPSSSC), university entrance examinations and scholarship portals.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="100">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('form-govt-job')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('form-govt-job')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-top">
+              <div class="service-icon-box"><i data-lucide="file-text"></i></div>
+              <span class="service-category-badge">Certificates</span>
+            </div>
+            <h4 class="service-card-title">Certificate Services</h4>
+            <p class="service-card-desc">E-District state verified Income (आय), Caste (जाति), Residential Domicile (निवास) and Birth/Death certificate applications.</p>
+            <div class="service-card-footer">
+              <div class="service-price-block" data-price="120">
+                <span class="service-price-label">Fee</span>
+                <a href="pages/register.html" class="price-lock-tag" style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.75rem; font-weight:600; color:var(--royal-blue); background:var(--royal-blue-light); padding:0.25rem 0.65rem; border-radius:var(--radius-full); text-decoration:none;">
+                  <i data-lucide="lock" style="width:13px; height:13px;"></i> Create Account to View
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="window.ServiceDetailsModal.open('cert-income')">Details</button>
+                <button class="btn btn-primary btn-sm" onclick="window.ServiceDetailsModal.proceedToApply('cert-income')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="pages/services.html" class="btn btn-outline btn-lg">
+            <i data-lucide="grid"></i> View All 40+ Digital Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-tag section-tag">Core Commitments</span>
+          <h2 class="section-title text-section" data-i18n="section_why_title">Why Choose Dinesh Online Solution?</h2>
+          <p class="section-subtitle" data-i18n="section_why_sub">
+            Experience prompt service, zero hidden fees, and end-to-end guidance.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="laptop"></i></div>
+            <h4 class="feature-title" data-i18n="why_1_title">Easy Online Access</h4>
+            <p class="feature-desc" data-i18n="why_1_desc">Apply for all documentation and payments online without standing in long queues.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="badge-percent"></i></div>
+            <h4 class="feature-title" data-i18n="why_2_title">Transparent Pricing</h4>
+            <p class="feature-desc" data-i18n="why_2_desc">Zero hidden charges. Clear distinction between official government fees and facilitation charges.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="lock"></i></div>
+            <h4 class="feature-title" data-i18n="why_3_title">Secure Payments</h4>
+            <p class="feature-desc" data-i18n="why_3_desc">Industry-standard encrypted transactions via Razorpay with instant verifiable receipts.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="user-check"></i></div>
+            <h4 class="feature-title" data-i18n="why_4_title">Professional Assistance</h4>
+            <p class="feature-desc" data-i18n="why_4_desc">Experienced operators cross-check every single application to prevent clerical rejections.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="activity"></i></div>
+            <h4 class="feature-title" data-i18n="why_5_title">Application Tracking</h4>
+            <p class="feature-desc" data-i18n="why_5_desc">Real-time SMS and online tracking from document verification to government approval.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i data-lucide="headset"></i></div>
+            <h4 class="feature-title" data-i18n="why_6_title">Dedicated Support</h4>
+            <p class="feature-desc" data-i18n="why_6_desc">Direct WhatsApp and helpline phone support whenever you need clarifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (5 Steps) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-tag section-tag">Seamless Process</span>
+          <h2 class="section-title text-section" data-i18n="section_how_title">How It Works</h2>
+          <p class="section-subtitle" data-i18n="section_how_sub">Get your digital tasks completed in 5 simple, guided steps.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number-circle">1</div>
+            <h4 class="step-title" data-i18n="step_1_title">Create Account</h4>
+            <p class="step-desc" data-i18n="step_1_desc">Sign up in 30 seconds using your 10-digit mobile number and 4-digit PIN.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-circle">2</div>
+            <h4 class="step-title" data-i18n="step_2_title">Choose Service</h4>
+            <p class="step-desc" data-i18n="step_2_desc">Select PAN, Aadhaar, Bill Payments, Government Schemes or Certificates.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-circle">3</div>
+            <h4 class="step-title" data-i18n="step_3_title">Upload Documents</h4>
+            <p class="step-desc" data-i18n="step_3_desc">Safely attach your required photos and identification documents.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-circle">4</div>
+            <h4 class="step-title" data-i18n="step_4_title">Make Payment</h4>
+            <p class="step-desc" data-i18n="step_4_desc">Pay service fees securely through UPI, Debit Card, Credit Card or Netbanking.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number-circle">5</div>
+            <h4 class="step-title" data-i18n="step_5_title">Track Application</h4>
+            <p class="step-desc" data-i18n="step_5_desc">Receive real-time progress updates and download verified certificates directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section">
+      <div class="container about-preview-grid">
+        <div>
+          <img src="assets/images/about-image.png" alt="About Dinesh Online Solution Digital Seva Centre" style="width:100%; border-radius:var(--radius-xl); box-shadow:var(--shadow-lg); display:block; object-fit:cover;">
+        </div>
+        <div>
+          <span class="badge badge-tag section-tag">About Our Centre</span>
+          <h2 class="section-title text-section" style="margin-bottom:1.25rem;" data-i18n="about_title">About Dinesh Online Solution</h2>
+          <p class="text-body" style="margin-bottom:1rem;" data-i18n="about_p1">
+            Dinesh Online Solution is your trusted neighbourhood and online digital service centre. We bridge the technology gap by delivering swift, transparent, and accurate citizen services across Uttar Pradesh and throughout India.
+          </p>
+          <p class="text-body" data-i18n="about_p2">
+            Whether you need a new PAN card, Aadhaar updates, urgent exam form submission, or bill payments, we guarantee personal attention, error-free documentation, and prompt execution.
+          </p>
+
+          <div class="about-badge-list">
+            <div class="about-badge-item">
+              <i data-lucide="check-circle-2"></i>
+              <span data-i18n="about_feat_1">Verified Digital Seva Centre Operator</span>
+            </div>
+            <div class="about-badge-item">
+              <i data-lucide="check-circle-2"></i>
+              <span data-i18n="about_feat_2">Strict Document Privacy and Encrypted Storage</span>
+            </div>
+            <div class="about-badge-item">
+              <i data-lucide="check-circle-2"></i>
+              <span data-i18n="about_feat_3">Fast-Track Processing & Instant Acknowledgment</span>
+            </div>
+          </div>
+
+          <a href="pages/about.html" class="btn btn-primary">
+            Read Full Profile & Accreditations <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-tag section-tag">Direct Assistance</span>
+          <h2 class="section-title text-section" data-i18n="contact_title">Get In Touch</h2>
+          <p class="section-subtitle" data-i18n="contact_sub">Have questions about an application or need special assistance? Contact us today.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Information Card -->
+          <div class="contact-info-card">
+            <div>
+              <h3>Dinesh Online Solution</h3>
+              <p>Your True Digital Companion for all citizen, utility and digital services.</p>
+
+              <div class="contact-details-list">
+                <div class="contact-detail-row">
+                  <i data-lucide="phone"></i>
+                  <div>
+                    <strong>Helpline Phone & WhatsApp</strong>
+                    <a href="tel:+919131171406">+91 91311 71406</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-row">
+                  <i data-lucide="message-square"></i>
+                  <div>
+                    <strong>WhatsApp Direct</strong>
+                    <a href="https://wa.me/919131171406" target="_blank" rel="noopener">+91 91311 71406</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-row">
+                  <i data-lucide="mail"></i>
+                  <div>
+                    <strong>Email Support</strong>
+                    <a href="mailto:email.d2841735@gmail.com">email.d2841735@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-detail-row">
+                  <i data-lucide="map-pin"></i>
+                  <div>
+                    <strong>Centre Address</strong>
+                    <span>Jabalpur , Madhya Pradesh</span>
+                  </div>
+                </div>
+
+                <div class="contact-detail-row">
+                  <i data-lucide="clock"></i>
+                  <div>
+                    <strong>Working Hours</strong>
+                    <span>9am to 7:30 pm (All Working Days)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a href="https://maps.google.com/?q=Jabalpur,+Madhya+Pradesh" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);">
+                <i data-lucide="map"></i> View on Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Query Form -->
+          <div class="contact-form-card">
+            <h4 style="margin-bottom:1.25rem;">Send Us an Inquiry</h4>
+            <form id="homeContactForm">
+              <div class="form-group">
+                <label class="form-label required" data-i18n="form_your_name">Full Name</label>
+                <input type="text" id="homeContactName" class="form-control" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required" data-i18n="form_your_phone">Mobile Number</label>
+                <input type="tel" id="homeContactMobile" class="form-control" placeholder="10-digit mobile number" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required" data-i18n="form_your_message">Your Query / Required Service</label>
+                <textarea id="homeContactMessage" class="form-control" rows="4" placeholder="Describe the service or question you have..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" data-i18n="btn_send_message">
+                <i data-lucide="send"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Official Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-logo-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" data-i18n="brand_name">Dinesh Online Solution</span>
+              <span class="brand-tagline" data-i18n="brand_tagline">Your True Digital Companion</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Authorized Digital Seva & Citizen Facilitation Centre empowering communities with swift, paperless documentation and utility payments.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://wa.me/919131171406" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="pages/services.html" data-i18n="nav_services">All Services</a>
+            <a href="pages/about.html" data-i18n="nav_about">About Us</a>
+            <a href="pages/contact.html" data-i18n="nav_contact">Contact Us</a>
+            <a href="pages/customer-dashboard.html">Customer Dashboard</a>
+            <a href="pages/admin-login.html">Admin Portal</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Categories</h4>
+          <div class="footer-links">
+            <a href="pages/services.html?cat=PAN">PAN Card Services</a>
+            <a href="pages/services.html?cat=Aadhaar">Aadhaar Assistance</a>
+            <a href="pages/services.html?cat=Bills">Bill Payments</a>
+            <a href="pages/services.html?cat=Forms">Online Forms</a>
+            <a href="pages/services.html?cat=Certificates">Certificates</a>
+            <a href="pages/services.html?cat=Schemes">Govt Schemes</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact Information</h4>
+          <div class="footer-contact-list">
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <span>+91 91311 71406</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="message-square"></i>
+              <span>+91 91311 71406 (WhatsApp)</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <span>email.d2841735@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Jabalpur , Madhya Pradesh</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="clock"></i>
+              <span>9am to 7:30 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory Government Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>Statutory Notice:</strong> Dinesh Online Solution is an independent digital facilitation and documentation assistance centre. We are not a government agency, department or official portal. Government fees (if any) are collected strictly as official pass-through fees without markup. Service charges reflect professional operator assistance, file formatting, verification and portal submission services.
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Dinesh Online Solution. All rights reserved. Designed with modern web standards.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="pages/contact.html#privacy">Privacy Policy</a>
+          <a href="pages/contact.html#terms">Terms & Conditions</a>
+          <a href="pages/contact.html#refund">Refund Policy</a>
+          <a href="pages/contact.html#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/919131171406?text=Hello%20Dinesh%20Online%20Solution,%20I%20need%20assistance%20with%20a%20digital%20service." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i data-lucide="message-circle" style="font-size:26px;"></i>
+  </a>
+
+  <!-- Firebase Compat Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <!-- Razorpay SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Configuration & Core Utilities -->
+  <script src="js/config/firebase-config.js"></script>
+  <script src="js/i18n/translations.js"></script>
+  <script src="js/core/utilities.js"></script>
+  <script src="js/core/validation.js"></script>
+  <script src="js/core/notifications.js"></script>
+  <script src="js/core/app.js"></script>
+
+  <!-- Services & Details Modal -->
+  <script src="js/auth/session.js"></script>
+  <script src="js/services/service-list.js"></script>
+  <script src="js/services/service-details.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if customer is logged in to reveal prices
+      const customer = window.DOSAuthSession ? window.DOSAuthSession.getCustomer() : null;
+      if (customer) {
+        document.querySelectorAll('#popularServicesGrid .service-price-block').forEach(el => {
+          const pr = el.getAttribute('data-price');
+          if (pr) {
+            el.innerHTML = `
+              <span class="service-price-label">Starts at</span>
+              <span class="service-price-val">${DOSUtils.formatINR(pr)}</span>
+            `;
+          }
+        });
+      }
+
+      const contactForm = document.getElementById('homeContactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('homeContactName').value.trim();
+          const mobile = document.getElementById('homeContactMobile').value.trim();
+          const msg = document.getElementById('homeContactMessage').value.trim();
+
+          if (!DOSValidation.isValidIndianMobile(mobile)) {
+            window.showToast('Please enter a valid 10-digit mobile number.', 'error');
+            return;
+          }
+
+          // Save ticket to demo store or Firebase
+          const tickets = DOSUtils.demoStore.get('support_tickets', []);
+          tickets.unshift({
+            id: 'TCK-' + Math.floor(100 + Math.random() * 900),
+            name,
+            mobile,
+            subject: 'Homepage Inquiry',
+            message: msg,
+            status: 'Open',
+            createdAt: new Date().toISOString()
+          });
+          DOSUtils.demoStore.set('support_tickets', tickets);
+
+          window.showToast('Thank you! Your inquiry has been received. Our team will contact you shortly.', 'success');
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

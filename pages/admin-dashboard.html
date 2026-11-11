@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Dinesh Online Solution</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <script src="../js/core/admin-guard.js"></script>
+</head>
+<body>
+
+  <header class="site-header" style="background:#0F172A; border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div class="container header-inner">
+      <a href="admin-dashboard.html" class="brand">
+        <div class="brand-logo-icon"><i data-lucide="shield-check"></i></div>
+        <div class="brand-text">
+          <span class="brand-title" style="color:#fff;">Dinesh Online Solution</span>
+          <span class="brand-tagline">Admin Console</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <span class="admin-badge-indicator">Verified Operator</span>
+        <a href="../index.html" target="_blank" class="btn btn-outline btn-sm" style="color:#cbd5e1; border-color:rgba(255,255,255,0.2);">
+          <i data-lucide="external-link"></i> View Website
+        </a>
+        <button class="mobile-nav-toggle" onclick="document.querySelector('.admin-sidebar').classList.toggle('open')" style="color:#fff;">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-avatar-box">OP</div>
+        <div class="admin-operator-meta">
+          <div class="admin-operator-name">Dinesh Operator</div>
+          <div class="admin-operator-role"><span class="status-dot-pulse"></span> Super Admin</div>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <a href="admin-dashboard.html" class="admin-nav-link active">
+          <i data-lucide="layout-dashboard"></i> Dashboard
+        </a>
+        <a href="admin-applications.html" class="admin-nav-link">
+          <i data-lucide="file-check"></i> Applications
+        </a>
+        <a href="admin-customers.html" class="admin-nav-link">
+          <i data-lucide="users"></i> Customers
+        </a>
+        <a href="admin-services.html" class="admin-nav-link">
+          <i data-lucide="layers"></i> Services & Pricing
+        </a>
+        <a href="admin-payments.html" class="admin-nav-link">
+          <i data-lucide="banknote"></i> Revenue & Ledger
+        </a>
+        <a href="admin-support.html" class="admin-nav-link">
+          <i data-lucide="life-buoy"></i> Support Desk
+        </a>
+        <a href="admin-settings.html" class="admin-nav-link">
+          <i data-lucide="settings"></i> Portal Settings
+        </a>
+      </nav>
+
+      <div style="padding:1rem 0.75rem; border-top:1px solid rgba(255,255,255,0.08);">
+        <button class="admin-nav-link" onclick="window.adminLogout()" style="width:100%; color:#f87171;">
+          <i data-lucide="log-out"></i> Admin Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="admin-main">
+      <div class="dashboard-header">
+        <div class="dashboard-title-group">
+          <h1>Operator Control Centre</h1>
+          <p>Real-time citizen applications, payment collections, and portal activity.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <a href="admin-applications.html" class="btn btn-primary btn-sm">
+            <i data-lucide="list"></i> Manage Applications
+          </a>
+        </div>
+      </div>
+
+      <!-- Financial Split Strip -->
+      <div class="revenue-summary-strip">
+        <div class="revenue-card highlight">
+          <div class="text-muted" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px;">Total Verified Collections</div>
+          <div class="stat-number" id="adminStatRevenue" style="margin:0.25rem 0;">₹0</div>
+          <div style="font-size:0.75rem; opacity:0.9;">All Gateway Verified Inflows</div>
+        </div>
+
+        <div class="revenue-card">
+          <div class="text-muted" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px;">Facilitation Revenue (Net)</div>
+          <div class="stat-number" id="adminStatServiceRev" style="color:var(--royal-blue); margin:0.25rem 0;">₹0</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Dinesh Online Solution Earnings</div>
+        </div>
+
+        <div class="revenue-card">
+          <div class="text-muted" style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.5px;">Government Fee Pass-Through</div>
+          <div class="stat-number" id="adminStatGovtRev" style="color:var(--accent-orange); margin:0.25rem 0;">₹0</div>
+          <div style="font-size:0.75rem; color:var(--text-muted);">Discom & Statutory Fees Collected</div>
+        </div>
+      </div>
+
+      <!-- 4 Operation KPI Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrapper blue"><i data-lucide="users"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" id="adminStatCustomers">0</div>
+            <div class="stat-label">Registered Citizens</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper orange"><i data-lucide="clock"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" id="adminStatPending">0</div>
+            <div class="stat-label">Pending Reviews</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper green"><i data-lucide="check-circle-2"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" id="adminStatCompleted">0</div>
+            <div class="stat-label">Completed Orders</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper purple"><i data-lucide="file-text"></i></div>
+          <div class="stat-content">
+            <div class="stat-number" id="adminStatApps">0</div>
+            <div class="stat-label">Total Applications</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analytics Representation -->
+      <div class="admin-analytics-grid">
+        <div class="card">
+          <h4 style="margin-bottom:0.5rem;">Daily Booking Activity</h4>
+          <p class="text-meta">Weekly application submission volume</p>
+
+          <div class="simple-bar-chart">
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 45%;"></div>
+              <span class="chart-label">Mon</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 65%;"></div>
+              <span class="chart-label">Tue</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 80%;"></div>
+              <span class="chart-label">Wed</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 55%;"></div>
+              <span class="chart-label">Thu</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 95%;"></div>
+              <span class="chart-label">Fri</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 70%;"></div>
+              <span class="chart-label">Sat</span>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar" style="height: 35%;"></div>
+              <span class="chart-label">Sun</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-bottom:0.5rem;">Popular Categories</h4>
+          <p class="text-meta" style="margin-bottom:1rem;">Distribution of citizen demand</p>
+
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8125rem; font-weight:600; margin-bottom:0.25rem;">
+                <span>PAN & Aadhaar Assistance</span>
+                <span>42%</span>
+              </div>
+              <div style="height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden;">
+                <div style="width:42%; height:100%; background:var(--royal-blue);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8125rem; font-weight:600; margin-bottom:0.25rem;">
+                <span>Electricity & Utility Bills</span>
+                <span>28%</span>
+              </div>
+              <div style="height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden;">
+                <div style="width:28%; height:100%; background:var(--success);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8125rem; font-weight:600; margin-bottom:0.25rem;">
+                <span>E-District Certificates</span>
+                <span>18%</span>
+              </div>
+              <div style="height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden;">
+                <div style="width:18%; height:100%; background:var(--accent-orange);"></div>
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.8125rem; font-weight:600; margin-bottom:0.25rem;">
+                <span>Government Job Forms</span>
+                <span>12%</span>
+              </div>
+              <div style="height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden;">
+                <div style="width:12%; height:100%; background:#9333ea;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Applications Review -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h3 style="font-size:1.25rem;">Latest Submissions</h3>
+        <a href="admin-applications.html" class="btn btn-outline btn-sm">View Full Application Desk</a>
+      </div>
+
+      <div class="admin-table-card">
+        <div class="table-responsive" style="border:none; border-radius:0;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Application ID</th>
+                <th>Customer</th>
+                <th>Service</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminRecentAppsTableBody">
+              <!-- Dynamically populated by admin dashboard.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <script src="../js/config/firebase-config.js"></script>
+  <script src="../js/i18n/translations.js"></script>
+  <script src="../js/core/utilities.js"></script>
+  <script src="../js/core/validation.js"></script>
+  <script src="../js/core/notifications.js"></script>
+  <script src="../js/auth/session.js"></script>
+  <script src="../js/admin/dashboard.js"></script>
+  <script src="../js/core/app.js"></script>
+</body>
+</html>
+

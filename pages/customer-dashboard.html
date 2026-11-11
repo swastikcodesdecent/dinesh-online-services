@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Dinesh Online Solution</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/customer-dashboard.css">
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- Customer Auth Guard -->
+  <script src="../js/core/auth-guard.js"></script>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <div class="brand-logo-icon"><i data-lucide="shield-check"></i></div>
+        <div class="brand-text">
+          <span class="brand-title">Dinesh Online Solution</span>
+          <span class="brand-tagline">Citizen Portal</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button class="lang-btn" aria-label="Toggle Language">
+          <i data-lucide="globe"></i>
+          <span class="lang-switcher-text">हिन्दी</span>
+        </button>
+
+        <a href="services.html" class="btn btn-outline btn-sm">
+          <i data-lucide="plus-circle"></i> Browse Services
+        </a>
+
+        <button class="mobile-nav-toggle" onclick="document.querySelector('.dashboard-sidebar').classList.toggle('open')">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <!-- Customer Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-user-card">
+        <div class="user-avatar-lg customer-avatar-display">DK</div>
+        <div class="user-info-text">
+          <div class="user-display-name customer-name-display">Customer</div>
+          <div class="user-display-id customer-id-display">CID-100234</div>
+          <div class="customer-mobile-display" style="font-size:0.75rem; color:var(--text-muted);">+91 9876543210</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="customer-dashboard.html" class="sidebar-link active">
+          <i data-lucide="layout-dashboard"></i> Overview
+        </a>
+        <a href="services.html" class="sidebar-link">
+          <i data-lucide="grid"></i> Browse Services
+        </a>
+        <a href="my-applications.html" class="sidebar-link">
+          <i data-lucide="file-text"></i> My Applications
+        </a>
+        <a href="profile.html#uploadDocs" class="sidebar-link">
+          <i data-lucide="folder-up"></i> Document Vault
+        </a>
+        <a href="payment-history.html" class="sidebar-link">
+          <i data-lucide="receipt"></i> Payment History
+        </a>
+        <a href="contact.html" class="sidebar-link">
+          <i data-lucide="help-circle"></i> Support Desk
+        </a>
+        <a href="profile.html" class="sidebar-link">
+          <i data-lucide="user"></i> My Profile & PIN
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-link" onclick="window.customerLogout()" style="width:100%; color:var(--error);">
+          <i data-lucide="log-out"></i> Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <div class="dashboard-header">
+        <div class="dashboard-title-group">
+          <h1>Welcome, <span class="customer-name-display">Customer</span>!</h1>
+          <p>Access your ongoing applications, verify payments, and order new citizen services.</p>
+        </div>
+        <div>
+          <a href="services.html" class="btn btn-primary">
+            <i data-lucide="plus"></i> Apply for a Service
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Dashboard Metric Stat Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrapper blue">
+            <i data-lucide="briefcase"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="statTotalServices">0</div>
+            <div class="stat-label">Total Services Used</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper orange">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="statPendingApps">0</div>
+            <div class="stat-label">In Review / Pending</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper green">
+            <i data-lucide="check-circle-2"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="statCompletedApps">0</div>
+            <div class="stat-label">Completed Applications</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper purple">
+            <i data-lucide="credit-card"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number" id="statTotalPayments">₹0</div>
+            <div class="stat-label">Total Amount Paid</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Shortcuts Banner -->
+      <div style="background:linear-gradient(135deg, var(--primary-navy), var(--royal-blue)); color:#fff; border-radius:var(--radius-xl); padding:1.75rem; margin-bottom:2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem;">
+        <div>
+          <h3 style="color:#fff; font-size:1.25rem; margin-bottom:0.25rem;">Need urgent PAN, Electricity, or Form Filling?</h3>
+          <p style="color:#cbd5e1; font-size:0.875rem;">Our operators process priority requests during working hours with live tracking.</p>
+        </div>
+        <div style="display:flex; gap:0.75rem;">
+          <a href="services.html" class="btn btn-accent"><i data-lucide="zap"></i> Quick Apply</a>
+          <a href="https://wa.me/919131171406" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);">
+            <i data-lucide="message-circle"></i> WhatsApp Desk
+          </a>
+        </div>
+      </div>
+
+      <!-- Recent Applications Section -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h3 style="font-size:1.25rem;">Recent Applications</h3>
+        <a href="my-applications.html" class="btn btn-outline btn-sm">View All Applications</a>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Application ID</th>
+              <th>Service Name</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="recentApplicationsTableBody">
+            <!-- Populated dynamically by dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- Firebase & Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+
+  <!-- Razorpay SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script src="../js/config/firebase-config.js"></script>
+  <script src="../js/i18n/translations.js"></script>
+  <script src="../js/core/utilities.js"></script>
+  <script src="../js/core/validation.js"></script>
+  <script src="../js/core/notifications.js"></script>
+  <script src="../js/auth/session.js"></script>
+  <script src="../js/services/service-list.js"></script>
+  <script src="../js/services/service-details.js"></script>
+  <script src="../js/payments/razorpay.js"></script>
+  <script src="../js/payments/receipts.js"></script>
+  <script src="../js/customer/booking.js"></script>
+  <script src="../js/customer/applications.js"></script>
+  <script src="../js/customer/dashboard.js"></script>
+  <script src="../js/core/app.js"></script>
+</body>
+</html>
+
